@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = TolerateJson::VERSION
   spec.authors       = ["Matthew Nielsen"]
   spec.email         = ["xunker@pyxidis.org"]
-  spec.description   = %q{A json formatter that works "good enough". It's pure ruby with no gem dependencies. 60% of the time, it works every time.}
+  spec.description   = %q{A JSON formatter written in pure Ruby that works "good enough" and has no gem dependencies. 60% of the time, it works every time.}
   spec.summary       = %q{Tolerate_json is a pure-ruby Json formatter that has no outside gem dependencies. It almost works right and is good enough so you can tolerate reading JSON from your screen (hence the name). It is designed to be a simple formatter for when you need a lightweight component, but it is not suitable for cases where proper formatting is mission-critical. Compatible with MRI 1.8.7, 1.9.3 and 2.0.0 as well as JRuby and Rubinius in those modes.}
   spec.homepage      = ""
   spec.license       = "MIT"

@@ -1,6 +1,6 @@
 # TolerateJson
 
-A json formatter that works "good enough". It's pure ruby with no gem dependencies. 60% of the time, it works every time.
+A JSON formatter written in pure Ruby that works "good enough" and has no gem dependencies. 60% of the time, it works every time.
 
 ## Description
 
@@ -41,6 +41,8 @@ Or install it yourself as:
   #    }
   # }
   #
+```
+
 
 ## Contributing
 
