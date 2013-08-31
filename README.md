@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xunker/tolerate_json.png?branch=master)](https://travis-ci.org/xunker/tolerate_json)
+
 # TolerateJson
 
 A JSON formatter written in pure Ruby that works "good enough" and has no gem dependencies. 60% of the time, it works every time.
