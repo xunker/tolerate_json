@@ -19,7 +19,7 @@ module TolerateJson
 
     json = json.to_s.gsub(/\{[\s+]\"/, "{\"").gsub(/\{(\s+)\"/, "{\"").gsub(/\"(\s+)\}/, "\"}").gsub(/true(\s+)\}/, "true}").gsub(/false(\s+)\}/, "false}").gsub(/\",(\s+)\"/, '","')
 
-    json = json.gsub("},", "},\n").gsub("],", "],\n").gsub("{[", "{\n[").gsub("}]", "}\n]").gsub("[{", "[\n{").gsub("]}", "]\n}").gsub("{\"", "{\n\"").gsub("\"}", "\"\n}").gsub("\",\"", "\",\n\"").gsub(":true,\"", ":true,\n\"").gsub(":false,\"", ":false,\n\"").gsub(":true}", ":true\n}").gsub(":false}", ":false\n}").gsub(/\:(\d+),\"/) { ":#{$1},\n\"" }.gsub(/\:(\d+),\"/,":\1,\n\"")
+    json = json.gsub("},", "},\n").gsub("],", "],\n").gsub("{[", "{\n[").gsub("}]", "}\n]").gsub("[{", "[\n{").gsub("]}", "]\n}").gsub("{\"", "{\n\"").gsub("\"}", "\"\n}").gsub("\",\"", "\",\n\"").gsub(":true,\"", ":true,\n\"").gsub(":false,\"", ":false,\n\"").gsub(":true}", ":true\n}").gsub(":false}", ":false\n}").gsub(/:(\d+)}/) { ":#{$1}\n}" }.gsub(/\:(\d+),\"/) { ":#{$1},\n\"" }.gsub(/\:(\d+),\"/,":\1,\n\"")
 
     output = []
 

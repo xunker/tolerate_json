@@ -52,6 +52,13 @@ describe TolerateJson do
       expect(t.pretty_print_json(unformatted)).to eq(formatted)
     end
 
+    it "should sould separate numbers and closing curly braces with cr" do
+      unformatted = '{"qux":{"foo":1}, "quux":"quuux"}'
+      formatted= "{\n  \"qux\":{\n    \"foo\":1\n  },\n   \"quux\":\"quuux\"\n}\n"
+
+      expect(t.pretty_print_json(unformatted)).to eq(formatted)
+    end
+
     it "should include only one cr at the end of the result" do
       unformatted = "{}\n\n\n"
       formatted= "{\n}\n"
