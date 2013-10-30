@@ -10,6 +10,7 @@ module TolerateJson
 
     if json.match(/[^\n]\}$/)
       json.gsub!(/\}$/, "\n}")
+      json.gsub!(/\}\}/, "}\n}")
     end
 
     if json.match(/[^\n]\]$/)

@@ -45,6 +45,13 @@ describe TolerateJson do
       expect(t.pretty_print_json(unformatted)).to eq(formatted)
     end
 
+    it "should separate concurrant curly braces with a cr" do
+      unformatted = '{"qux":{"foo":{"bar":"baz"}}, "quux":"quuux"}'
+      formatted= "{\n  \"qux\":{\n    \"foo\":{\n      \"bar\":\"baz\"\n    }\n  },\n   \"quux\":\"quuux\"\n}\n"
+
+      expect(t.pretty_print_json(unformatted)).to eq(formatted)
+    end
+
     it "should include only one cr at the end of the result" do
       unformatted = "{}\n\n\n"
       formatted= "{\n}\n"
