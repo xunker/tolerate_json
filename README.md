@@ -31,7 +31,7 @@ Or install it yourself as:
 
   require 'tolerate_json'
 
-  include TolderateJson
+  include TolerateJson
 
   puts pretty_print_json('{"foo":{"bar":"baz"}}')
 
