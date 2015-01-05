@@ -12,19 +12,11 @@ It is a "90%" solution: it works in 90% of use cases, but will almost certainly 
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'tolerate_json'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install tolerate_json
+Either add `gem 'tolerate_json'` to your application's Gemfile and do `bundle install`, or install it manually with `gem install tolerate_json`
 
 ## Usage
+
+### Include the module
 
 ```ruby
   require 'rubygems' # optional on 1.9.3 and up
@@ -34,6 +26,25 @@ Or install it yourself as:
   include TolderateJson
 
   puts pretty_print_json('{"foo":{"bar":"baz"}}')
+
+  # Prints:
+  #
+  # {
+  #    "foo":{
+  #      "bar":"baz"
+  #    }
+  # }
+  #
+```
+
+### Use it directly from the class
+
+```ruby
+  require 'rubygems' # optional on 1.9.3 and up
+
+  require 'tolerate_json'
+
+  puts TolderateJson.pretty_print_json('{"foo":{"bar":"baz"}}')
 
   # Prints:
   #
