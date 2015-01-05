@@ -23,7 +23,7 @@ Either add `gem 'tolerate_json'` to your application's Gemfile and do `bundle in
 
   require 'tolerate_json'
 
-  include TolderateJson
+  include TolerateJson
 
   puts pretty_print_json('{"foo":{"bar":"baz"}}')
 
@@ -44,7 +44,7 @@ Either add `gem 'tolerate_json'` to your application's Gemfile and do `bundle in
 
   require 'tolerate_json'
 
-  puts TolderateJson.pretty_print_json('{"foo":{"bar":"baz"}}')
+  puts TolerateJson.pretty_print_json('{"foo":{"bar":"baz"}}')
 
   # Prints:
   #
